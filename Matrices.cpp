@@ -46,11 +46,11 @@ namespace Matrices
 
       for (int i = 0; i < a.getRows(); i++)
       {
-         for (int j = 0; j < b.getCols(); j++)
+         for (int k = 0; k < b.getCols(); k++)
          {
-            for (int k = 0; k < a.getCols(); k++)
+            for (int j = 0; j < a.getCols(); j++)
             {
-               result(i, k) += a(i, k) * b(k, j);
+               result(i, k) += a(i, j) * b(j, k);
             }
          }
       }
